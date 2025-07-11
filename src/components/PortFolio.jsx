@@ -1,79 +1,97 @@
 import React from "react";
-import java from "../../public/java.png";
-import python from "../../public/python.webp";
-import mongoDB from "../../public/mongodb.jpg";
-import express from "../../public/express.png";
-import reactjs from "../../public/reactjs.png";
-import nodejs from "../../public/node.png";
+
+import course from "../../public/course.jpg";
+
+import todo from "../../public/todo.webp";
+import weather from "../../public/weather.webp";
+import portfolio from "../../public/portfolio.jpg";
+
 function PortFolio() {
-  const cardItem = [
+  const projects = [
     {
       id: 1,
-      logo: mongoDB,
-      name: "MongoDB",
+      logo: course,
+      name: "Course Selling Web App",
+      desc: "A full-stack MERN application with Razorpay payment integration, admin dashboard, course reviews, and user authentication.",
+      userLink: "https://course-selling-app-sage.vercel.app", // User frontend or main repo
+      adminLink: "https://course-selling-app-sage.vercel.app/admin", // Admin panel repo if separate
     },
     {
       id: 2,
-      logo: express,
-      name: "Express",
+      logo: todo,
+      name: "Todo App",
+      desc: "Simple CRUD app with user login/signup using JWT, built with Node.js, Express, and MongoDB for backend.",
+      codeLink: "https://github.com/durgvijay2345/todo-app",
     },
     {
       id: 3,
-      logo: reactjs,
-      name: "ReactJS",
+      logo: weather,
+      name: "Weather App (HTML,CSS,JAVASCRIPT)",
+      desc: "Weather app built using React and OpenWeatherMap API to display real-time data with location search.",
+      codeLink: "https://durgvijay2345.github.io/weather-app/",
     },
     {
       id: 4,
-      logo: nodejs,
-      name: "NodeJS",
-    },
-    {
-      id: 5,
-      logo: python,
-      name: "Python",
-    },
-    {
-      id: 6,
-      logo: java,
-      name: "Java",
+      logo: portfolio,
+      name: "Portfolio Website",
+      desc: "My personal portfolio built using React and Tailwind CSS showcasing my skills, education, and projects.",
+      codeLink: "https://github.com/durgvijay2345/my-portfolio",
     },
   ];
+
   return (
     <div
       name="Portfolio"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
+      className="bg-gradient-to-br from-slate-100 to-slate-300 max-w-screen-2xl container mx-auto px-4 md:px-20 py-16"
     >
-      <div>
-        <h1 className="text-3xl font-bold mb-5">PortFolio</h1>
-        <span className=" underline font-semibold">Featured Projects</span>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
-          {cardItem.map(({ id, logo, name }) => (
-            <div
-              className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300"
-              key={id}
-            >
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4 text-gray-800">Portfolio</h1>
+        <p className="text-green-600 font-semibold text-lg underline">
+          Featured Projects
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        {projects.map(({ id, logo, name, desc, codeLink, userLink, adminLink }) => (
+          <div
+            key={id}
+            className="w-full bg-white border-2 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300"
+          >
+            <div className="flex flex-col items-center">
               <img
                 src={logo}
-                className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                alt=""
+                className="w-[90px] h-[90px] rounded-full border-2"
+                alt={name}
               />
-              <div>
-                <div className="px-2 font-bold text-xl mb-2">{name}</div>
-                <p className="px-2 text-gray-700">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-              </div>
-              <div className=" px-6 py-4 space-x-3 justify-around">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
-                  Video
-                </button>
-                <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
-                  Source code
-                </button>
-              </div>
+              <h2 className="text-xl font-bold mt-4 text-center">{name}</h2>
+              <p className="text-gray-600 text-sm mt-2 text-center">{desc}</p>
             </div>
-          ))}
-        </div>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+              {userLink && (
+                <a href={userLink} target="_blank" rel="noopener noreferrer">
+                  <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
+                    User Side
+                  </button>
+                </a>
+              )}
+              {adminLink && (
+                <a href={adminLink} target="_blank" rel="noopener noreferrer">
+                  <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded">
+                    Admin Side
+                  </button>
+                </a>
+              )}
+              {codeLink && (
+                <a href={codeLink} target="_blank" rel="noopener noreferrer">
+                  <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
+                    Open Link
+                  </button>
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

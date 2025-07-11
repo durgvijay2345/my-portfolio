@@ -1,92 +1,127 @@
-import axios from "axios";
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+
   const {
     register,
     handleSubmit,
-
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    const userInfo = {
-      name: data.name,
-      email: data.email,
-      message: data.message,
-    };
-    try {
-      await axios.post("https://getform.io/f/raeqjora", userInfo);
-      toast.success("Your message has been sent");
-    } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
-    }
+  const onSubmit = () => {
+    emailjs
+      .sendForm(
+        "service_i5l7pgt",      // ✅ Your EmailJS service ID
+        "template_8o2kuta",     // ✅ Your EmailJS template ID
+        form.current,
+        "gZhDG0a_QdldHpue9"     // ✅ Your EmailJS public key
+      )
+      .then(
+        () => {
+          toast.success("Your message has been sent!");
+          reset(); // Clear form after success
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          toast.error("Something went wrong.");
+        }
+      );
   };
+
   return (
-    <>
-      <div
-        name="Contact"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
-      >
-        <h1 className="text-3xl font-bold mb-4">Contact me</h1>
-        <span>Please fill out the form below to contact me</span>
-        <div className=" flex flex-col items-center justify-center mt-5">
+    <section
+      name="Contact"
+      className="w-full bg-gradient-to-br from-slate-100 to-slate-300 py-16 px-4"
+    >
+      <div className="max-w-screen-xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">Contact Me</h2>
+        <p className="text-gray-600 text-lg mb-10">
+          Feel free to reach out by filling the form below.
+        </p>
+
+        <div className="flex justify-center">
           <form
+            ref={form}
             onSubmit={handleSubmit(onSubmit)}
-            // action="https://getform.io/f/raeqjora"
-            // method="POST"
-            className="bg-slate-200 w-96 px-8 py-6 rounded-xl"
+            className="w-full max-w-lg bg-white p-8 rounded-xl shadow-md"
           >
-            <h1 className="text-xl font-semibold mb-4">Send Your Message</h1>
-            <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">FullName</label>
+            <h3 className="text-xl font-semibold text-gray-800 mb-6">
+              Send Your Message
+            </h3>
+
+            {/* Full Name */}
+            <div className="mb-4 text-left">
+              <label className="block text-gray-700 font-medium mb-1">
+                Full Name
+              </label>
               <input
                 {...register("name", { required: true })}
-                className="shadow rounded-lg appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name"
                 name="name"
                 type="text"
-                placeholder="Enter your fullname"
+                placeholder="Enter your full name"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              {errors.name && <span>This field is required</span>}
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">
+                  This field is required
+                </p>
+              )}
             </div>
-            <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">Email Address</label>
+
+            {/* Email Address */}
+            <div className="mb-4 text-left">
+              <label className="block text-gray-700 font-medium mb-1">
+                Email Address
+              </label>
               <input
                 {...register("email", { required: true })}
-                className="shadow rounded-lg appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email"
                 name="email"
-                type="text"
-                placeholder="Enter your email address"
+                type="email"
+                placeholder="Enter your email"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              {errors.email && <span>This field is required</span>}
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  This field is required
+                </p>
+              )}
             </div>
-            <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">Message</label>
+
+            {/* Message */}
+            <div className="mb-4 text-left">
+              <label className="block text-gray-700 font-medium mb-1">
+                Message
+              </label>
               <textarea
                 {...register("message", { required: true })}
-                className="shadow rounded-lg appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="message"
                 name="message"
-                type="text"
-                placeholder="Enter your Query"
-              />
-              {errors.message && <span>This field is required</span>}
+                placeholder="Write your message here"
+                rows="4"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1">
+                  This field is required
+                </p>
+              )}
             </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
             >
-              Send
+              Send Message
             </button>
           </form>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 
