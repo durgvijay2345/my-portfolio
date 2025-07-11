@@ -21,7 +21,7 @@ function PortFolio() {
       logo: todo,
       name: "Todo App",
       desc: "This todo app built using React and Tailwind CSS with add todo delete and reset",
-      codeLink: "https://durgvijay2345.github.io/todo/",
+      codeLink: "https://todo-ten-eta-62.vercel.app/",
     },
     {
       id: 3,
