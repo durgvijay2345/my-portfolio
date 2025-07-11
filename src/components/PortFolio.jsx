@@ -20,8 +20,8 @@ function PortFolio() {
       id: 2,
       logo: todo,
       name: "Todo App",
-      desc: "Simple CRUD app with user login/signup using JWT, built with Node.js, Express, and MongoDB for backend.",
-      codeLink: "https://github.com/durgvijay2345/todo-app",
+      desc: "This todo app built using React and Tailwind CSS with add todo delete and reset",
+      codeLink: "https://durgvijay2345.github.io/todo/",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ function PortFolio() {
       logo: portfolio,
       name: "Portfolio Website",
       desc: "My personal portfolio built using React and Tailwind CSS showcasing my skills, education, and projects.",
-      codeLink: "https://github.com/durgvijay2345/my-portfolio",
+      codeLink: "my-portfolio-lime-ten-42.vercel.app",
     },
   ];
 
