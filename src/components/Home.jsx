@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../../public/photo.avif";
+import pic from "../../public/profile.jpg";
 
 import { FaSquareFacebook, FaLinkedin, FaReact, FaNodeJs } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
