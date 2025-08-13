@@ -74,8 +74,7 @@ function PortFolio() {
               <h2 className="text-xl font-bold mt-4 text-center">{name}</h2>
               <p className="text-gray-600 text-sm mt-2 text-center">{desc}</p>
             </div>
-
-       <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 mb-2">
+<div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 mb-2">
   {userLink && (
     <a href={userLink} target="_blank" rel="noopener noreferrer">
       <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
