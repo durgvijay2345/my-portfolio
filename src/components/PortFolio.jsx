@@ -13,15 +13,15 @@ function PortFolio() {
       logo: course,
       name: "Course Selling Web App",
       desc: "A full-stack MERN application with Razorpay payment integration, admin dashboard, course reviews, and user authentication.",
-      userLive: "https://course-selling-app-sage.vercel.app", 
-      adminLive: "https://course-selling-app-sage.vercel.app/admin", 
+      userLink: "https://course-selling-app-sage.vercel.app", 
+      adminLink: "https://course-selling-app-sage.vercel.app/admin", 
     },
      {
       id: 2,
       logo: echo,
       name: "Echogram app",
       desc: "A full-stack MERN social media application with Instagram-like features, including stories, reels, messaging, user profiles, followers/following system, post likes and comments, and real-time notifications.",
-      Live: "https://echogram-eta.vercel.app",
+      codeLink: "https://echogram-eta.vercel.app",
      
     },
     {
@@ -29,21 +29,21 @@ function PortFolio() {
       logo: todo,
       name: "Todo App",
       desc: "This todo app built using React and Tailwind CSS with add todo delete and reset",
-      Live: "https://todo-ten-eta-62.vercel.app/",
+      codeLink: "https://todo-ten-eta-62.vercel.app/",
     },
     {
       id: 4,
       logo: weather,
       name: "Weather App (HTML,CSS,JAVASCRIPT)",
       desc: "Weather app built using React and OpenWeatherMap API to display real-time data with location search.",
-      Live: "https://durgvijay2345.github.io/weather-app/",
+      codeLink: "https://durgvijay2345.github.io/weather-app/",
     },
     {
       id: 5,
       logo: portfolio,
       name: "Portfolio Website",
       desc: "My personal portfolio built using React and Tailwind CSS showcasing my skills, education, and projects.",
-      Live: "my-portfolio-lime-ten-42.vercel.app",
+      codeLink: "my-portfolio-lime-ten-42.vercel.app",
     },
   ];
 
@@ -75,29 +75,30 @@ function PortFolio() {
               <p className="text-gray-600 text-sm mt-2 text-center">{desc}</p>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
-              {userLink && (
-                <a href={userLink} target="_blank" rel="noopener noreferrer">
-                  <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
-                    User Side
-                  </button>
-                </a>
-              )}
-              {adminLink && (
-                <a href={adminLink} target="_blank" rel="noopener noreferrer">
-                  <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded">
-                    Admin Side
-                  </button>
-                </a>
-              )}
-              {codeLink && (
-                <a href={codeLink} target="_blank" rel="noopener noreferrer">
-                  <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
-                    Open Link
-                  </button>
-                </a>
-              )}
-            </div>
+         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+  {userLink && (
+    <a href={userLink} target="_blank" rel="noopener noreferrer">
+      <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
+        User Live
+      </button>
+    </a>
+  )}
+  {adminLink && (
+    <a href={adminLink} target="_blank" rel="noopener noreferrer">
+      <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded">
+        Admin Live
+      </button>
+    </a>
+  )}
+  {codeLink && (
+    <a href={codeLink} target="_blank" rel="noopener noreferrer">
+      <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
+        Live
+      </button>
+    </a>
+  )}
+</div>
+
           </div>
         ))}
       </div>
