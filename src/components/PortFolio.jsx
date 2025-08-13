@@ -5,7 +5,7 @@ import course from "../../public/course.jpg";
 import todo from "../../public/todo.webp";
 import weather from "../../public/weather.webp";
 import portfolio from "../../public/portfolio.jpg";
-
+import echo from "../../public/echogram.jpg";
 function PortFolio() {
   const projects = [
     {
@@ -13,29 +13,36 @@ function PortFolio() {
       logo: course,
       name: "Course Selling Web App",
       desc: "A full-stack MERN application with Razorpay payment integration, admin dashboard, course reviews, and user authentication.",
-      userLink: "https://course-selling-app-sage.vercel.app", // User frontend or main repo
-      adminLink: "https://course-selling-app-sage.vercel.app/admin", // Admin panel repo if separate
-    },
-    {
+      userLive: "https://course-selling-app-sage.vercel.app", 
+      adminLive: "https://course-selling-app-sage.vercel.app/admin", 
+     {
       id: 2,
-      logo: todo,
-      name: "Todo App",
-      desc: "This todo app built using React and Tailwind CSS with add todo delete and reset",
-      codeLink: "https://todo-ten-eta-62.vercel.app/",
+      logo: echo,
+      name: "Echogram app",
+      desc: "A full-stack MERN social media application with Instagram-like features, including stories, reels, messaging, user profiles, followers/following system, post likes and comments, and real-time notifications.",
+      Live: "https://echogram-eta.vercel.app",
+     
     },
     {
       id: 3,
-      logo: weather,
-      name: "Weather App (HTML,CSS,JAVASCRIPT)",
-      desc: "Weather app built using React and OpenWeatherMap API to display real-time data with location search.",
-      codeLink: "https://durgvijay2345.github.io/weather-app/",
+      logo: todo,
+      name: "Todo App",
+      desc: "This todo app built using React and Tailwind CSS with add todo delete and reset",
+      Live: "https://todo-ten-eta-62.vercel.app/",
     },
     {
       id: 4,
+      logo: weather,
+      name: "Weather App (HTML,CSS,JAVASCRIPT)",
+      desc: "Weather app built using React and OpenWeatherMap API to display real-time data with location search.",
+      Live: "https://durgvijay2345.github.io/weather-app/",
+    },
+    {
+      id: 5,
       logo: portfolio,
       name: "Portfolio Website",
       desc: "My personal portfolio built using React and Tailwind CSS showcasing my skills, education, and projects.",
-      codeLink: "my-portfolio-lime-ten-42.vercel.app",
+      Live: "my-portfolio-lime-ten-42.vercel.app",
     },
   ];
 
