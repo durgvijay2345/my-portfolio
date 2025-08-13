@@ -5,7 +5,7 @@ import course from "../../public/course.jpg";
 import todo from "../../public/todo.webp";
 import weather from "../../public/weather.webp";
 import portfolio from "../../public/portfolio.jpg";
-import echo from "../../public/echogram.jpg";
+import echo from "../../public/echogram.jpeg";
 function PortFolio() {
   const projects = [
     {
@@ -15,6 +15,7 @@ function PortFolio() {
       desc: "A full-stack MERN application with Razorpay payment integration, admin dashboard, course reviews, and user authentication.",
       userLive: "https://course-selling-app-sage.vercel.app", 
       adminLive: "https://course-selling-app-sage.vercel.app/admin", 
+    },
      {
       id: 2,
       logo: echo,
