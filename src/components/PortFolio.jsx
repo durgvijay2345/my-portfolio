@@ -1,11 +1,11 @@
 import React from "react";
 
 import course from "../../public/course.jpg";
-
 import todo from "../../public/todo.webp";
 import weather from "../../public/weather.webp";
 import portfolio from "../../public/portfolio.jpg";
 import echo from "../../public/echogram.jpeg";
+
 function PortFolio() {
   const projects = [
     {
@@ -16,19 +16,18 @@ function PortFolio() {
       userLink: "https://course-selling-app-sage.vercel.app", 
       adminLink: "https://course-selling-app-sage.vercel.app/admin", 
     },
-     {
+    {
       id: 2,
       logo: echo,
       name: "Echogram app",
       desc: "A full-stack MERN social media application with Instagram-like features, including stories, reels, messaging, user profiles, followers/following system, post likes and comments, and real-time notifications.",
       codeLink: "https://echogram-eta.vercel.app",
-     
     },
     {
       id: 3,
       logo: todo,
       name: "Todo App",
-      desc: "This todo app built using React and Tailwind CSS with add todo delete and reset",
+      desc: "This todo app built using React and Tailwind CSS with add todo, delete, and reset functionality.",
       codeLink: "https://todo-ten-eta-62.vercel.app/",
     },
     {
@@ -43,7 +42,7 @@ function PortFolio() {
       logo: portfolio,
       name: "Portfolio Website",
       desc: "My personal portfolio built using React and Tailwind CSS showcasing my skills, education, and projects.",
-      codeLink: "my-portfolio-lime-ten-42.vercel.app",
+      codeLink: "https://my-portfolio-lime-ten-42.vercel.app",
     },
   ];
 
@@ -63,7 +62,7 @@ function PortFolio() {
         {projects.map(({ id, logo, name, desc, codeLink, userLink, adminLink }) => (
           <div
             key={id}
-            className="w-full bg-white border-2 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300"
+            className="w-full bg-white border-2 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 flex flex-col justify-between"
           >
             <div className="flex flex-col items-center">
               <img
@@ -74,30 +73,30 @@ function PortFolio() {
               <h2 className="text-xl font-bold mt-4 text-center">{name}</h2>
               <p className="text-gray-600 text-sm mt-2 text-center">{desc}</p>
             </div>
-<div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 mb-2">
-  {userLink && (
-    <a href={userLink} target="_blank" rel="noopener noreferrer">
-      <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
-        User Live
-      </button>
-    </a>
-  )}
-  {adminLink && (
-    <a href={adminLink} target="_blank" rel="noopener noreferrer">
-      <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded">
-        Admin Live
-      </button>
-    </a>
-  )}
-  {codeLink && (
-    <a href={codeLink} target="_blank" rel="noopener noreferrer">
-      <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
-        Live
-      </button>
-    </a>
-  )}
-</div>
 
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 mb-4">
+              {userLink && (
+                <a href={userLink} target="_blank" rel="noopener noreferrer">
+                  <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
+                    User Live
+                  </button>
+                </a>
+              )}
+              {adminLink && (
+                <a href={adminLink} target="_blank" rel="noopener noreferrer">
+                  <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded">
+                    Admin Live
+                  </button>
+                </a>
+              )}
+              {codeLink && (
+                <a href={codeLink} target="_blank" rel="noopener noreferrer">
+                  <button className="w-full sm:w-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
+                    Live
+                  </button>
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -106,3 +105,4 @@ function PortFolio() {
 }
 
 export default PortFolio;
+
