@@ -10,21 +10,12 @@ import gitLogo from "../../public/git.webp";
 import postmanLogo from "../../public/postman.webp";
 import htmlLogo from "../../public/html.png";
 import cssLogo from "../../public/css.jpg";
-import pythonLogo from "../../public/python.png";
-import javaLogo from "../../public/java.png";
-import jsLogo from "../../public/javascript.png";
-import numpyLogo from "../../public/numpy.png";
-import pandasLogo from "../../public/pandas.png";
-import mlLogo from "../../public/ml.png"; // ya python icon reuse kr skte ho
-import nlpLogo from "../../public/nlp.png"; // optional
 
 
 function Experience() {
   const cardItem = [
-  // Programming Languages (VERY IMPORTANT)
-  { id: 1, logo: javaLogo, name: "Java" },
-  { id: 2, logo: pythonLogo, name: "Python" },
-  { id: 3, logo: jsLogo, name: "JavaScript (ES6+)" },
+  
+ 
 
   // Frontend
   { id: 4, logo: htmlLogo, name: "HTML" },
@@ -37,12 +28,7 @@ function Experience() {
   { id: 9, logo: expressLogo, name: "Express.js" },
   { id: 10, logo: mongodbLogo, name: "MongoDB" },
 
-  // AI / ML (Game Changer for your resume)
-  { id: 11, logo: mlLogo || pythonLogo, name: "Machine Learning" },
-  { id: 12, logo: nlpLogo || pythonLogo, name: "Natural Language Processing" },
-  { id: 13, logo: numpyLogo || pythonLogo, name: "NumPy" },
-  { id: 14, logo: pandasLogo || pythonLogo, name: "Pandas" },
-
+ 
   // Tools
   { id: 15, logo: cloudinaryLogo, name: "Cloudinary" },
   { id: 16, logo: postmanLogo, name: "Postman" },
