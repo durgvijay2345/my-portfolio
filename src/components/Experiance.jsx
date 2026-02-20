@@ -1,11 +1,11 @@
 import React from "react";
 
-function Experience() {
+function Experiance() {
   const techStack = [
-    { id: 1, logo: "/node.png", name: "Node.js" },
-    { id: 2, logo: "/express.png", name: "Express.js" },
-    { id: 3, logo: "/prisma.jpg", name: "Prisma ORM" },
-    { id: 4, logo: "/postgresql.jpg", name: "PostgreSQL" },
+    { id: 1, logo: "../../public/node.png", name: "Node.js" },
+    { id: 2, logo: "../../public/express.png", name: "Express.js" },
+    { id: 3, logo: "../../public/prisma.jpg", name: "Prisma ORM" },
+    { id: 4, logo: "../../public/postgresql.jpg", name: "PostgreSQL" },
   ];
 
   return (
@@ -90,4 +90,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Experiance;
