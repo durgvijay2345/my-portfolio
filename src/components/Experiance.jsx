@@ -1,8 +1,8 @@
 import React from "react";
 import nodeLogo from "../../public/node.png";
 import expressLogo from "../../public/express.png";
-import prismaLogo from "../../public/prisma.png"; // add this image in public
-import postgresLogo from "../../public/postgresql.png"; // add this image in public
+import prismaLogo from "../../public/prisma.jpg"; // add this image in public
+import postgresLogo from "../../public/postgresql.jpg"; // add this image in public
 
 function Experience() {
   const techStack = [
