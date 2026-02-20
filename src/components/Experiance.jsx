@@ -1,15 +1,11 @@
 import React from "react";
-import nodeLogo from "../../public/node.png";
-import expressLogo from "../../public/express.png";
-import prismaLogo from "../../public/prisma.jpg"; // add this image in public
-import postgresLogo from "../../public/postgresql.jpg"; // add this image in public
 
 function Experience() {
   const techStack = [
-    { id: 1, logo: nodeLogo, name: "Node.js" },
-    { id: 2, logo: expressLogo, name: "Express.js" },
-    { id: 3, logo: prismaLogo, name: "Prisma ORM" },
-    { id: 4, logo: postgresLogo, name: "PostgreSQL" },
+    { id: 1, logo: "/node.png", name: "Node.js" },
+    { id: 2, logo: "/express.png", name: "Express.js" },
+    { id: 3, logo: "/prisma.jpg", name: "Prisma ORM" },
+    { id: 4, logo: "/postgresql.jpg", name: "PostgreSQL" },
   ];
 
   return (
@@ -31,7 +27,7 @@ function Experience() {
       {/* Internship Card */}
       <div className="bg-white rounded-2xl shadow-xl p-6 md:p-10 border border-gray-200 hover:shadow-2xl transition duration-300">
         
-        {/* Company + Role */}
+        {/* Role + Company */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
           <div>
             <h2 className="text-xl md:text-2xl font-bold text-gray-800">
@@ -50,19 +46,17 @@ function Experience() {
         {/* Description */}
         <ul className="list-disc pl-5 text-gray-700 text-sm md:text-base space-y-2 mb-8">
           <li>
-            Developed a Lead Management System to handle lead tracking,
-            assignment, and status updates.
+            Developed a Lead Management System for lead tracking, assignment,
+            and status management.
           </li>
           <li>
-            Built scalable REST APIs using Node.js and Express.js for efficient
-            data handling.
+            Designed and built REST APIs using Node.js and Express.js.
           </li>
           <li>
-            Integrated PostgreSQL database with Prisma ORM for optimized query
-            performance and structured data management.
+            Used Prisma ORM with PostgreSQL for efficient database operations.
           </li>
           <li>
-            Implemented CRUD operations, authentication logic, and backend
+            Implemented CRUD APIs, authentication, and scalable backend
             architecture for real-world business workflows.
           </li>
         </ul>
