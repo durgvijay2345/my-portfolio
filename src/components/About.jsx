@@ -71,69 +71,67 @@ function About() {
           </ul>
         </div>
 
-        {/* Skills */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-green-600 mb-6 border-b-2 pb-1 w-fit">
-            Skills & Expertise
-          </h2>
+     {/* Skills */}
+<div>
+  <h2 className="text-2xl md:text-3xl font-semibold text-green-600 mb-6 border-b-2 pb-1 w-fit">
+    Skills & Expertise
+  </h2>
 
-          <div className="bg-white shadow-xl rounded-2xl p-6 md:p-8 border border-gray-200">
-            <ul className="space-y-4 text-gray-800 text-base md:text-lg">
-              <li>
-                <span className="font-semibold text-blue-600">
-                  Programming Languages:
-                </span>{" "}
-                Java, Python, JavaScript, C, SQL
-              </li>
+  <div className="bg-white shadow-lg rounded-2xl p-6 md:p-8 border border-gray-200">
+    <ul className="space-y-4 text-gray-800 text-base md:text-lg">
+      
+      <li>
+        <span className="font-semibold text-blue-600">
+          Programming Languages:
+        </span>{" "}
+        Java, Python, JavaScript, C, SQL
+      </li>
 
-              <li>
-                <span className="font-semibold text-purple-600">
-                  AI / Machine Learning / Deep Learning:
-                </span>{" "}
-                Machine Learning, Deep Learning, NLP, LLMs, Scikit-learn,
-                NumPy, Pandas
-              </li>
+      <li>
+        <span className="font-semibold text-purple-600">
+          AI / Machine Learning / Deep Learning:
+        </span>{" "}
+        Machine Learning, Deep Learning, NLP, LLMs, Scikit-learn, NumPy, Pandas
+      </li>
 
-              <li>
-                <span className="font-semibold text-emerald-600">
-                  Full-Stack Development:
-                </span>{" "}
-                React.js, Next.js, Node.js, Express.js, REST APIs
-              </li>
+      <li>
+        <span className="font-semibold text-emerald-600">
+          Full-Stack Development:
+        </span>{" "}
+        React.js, Next.js, Node.js, Express.js, REST APIs
+      </li>
 
-              <li>
-                <span className="font-semibold text-orange-600">
-                  Databases:
-                </span>{" "}
-                MongoDB, MySQL, PostgreSQL
-              </li>
+      <li>
+        <span className="font-semibold text-orange-600">
+          Databases:
+        </span>{" "}
+        MongoDB, MySQL, PostgreSQL
+      </li>
 
-              <li>
-                <span className="font-semibold text-pink-600">
-                  Tools & Platforms:
-                </span>{" "}
-                Git, GitHub, Postman, Vercel, Render, AWS, Docker
-              </li>
+      <li>
+        <span className="font-semibold text-pink-600">
+          Tools & Platforms:
+        </span>{" "}
+        Git, GitHub, Postman, Vercel, Render, AWS, Docker
+      </li>
 
-              <li>
-                <span className="font-semibold text-indigo-600">
-                  Core Computer Science:
-                </span>{" "}
-                Data Structures & Algorithms, OOP, DBMS, Operating Systems,
-                Computer Networks, System Design
-              </li>
+      <li>
+        <span className="font-semibold text-indigo-600">
+          Core Computer Science:
+        </span>{" "}
+        Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks, System Design
+      </li>
 
-              <li>
-                <span className="font-semibold text-teal-600">
-                  Other Expertise:
-                </span>{" "}
-                Problem Solving, Competitive Programming, Scalable Systems,
-                Responsive UI, API Integration
-              </li>
-            </ul>
-          </div>
-        </div>
+      <li>
+        <span className="font-semibold text-teal-600">
+          Other Expertise:
+        </span>{" "}
+        Problem Solving, Competitive Programming, Scalable Systems, Responsive UI, API Integration
+      </li>
 
+    </ul>
+  </div>
+</div>
         {/* Achievements */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-green-600 mb-4 border-b-2 pb-1 w-fit">
