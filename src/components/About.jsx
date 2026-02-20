@@ -36,12 +36,7 @@ function About() {
               in Computer Science and Engineering — Harcourt Butler Technical
               University, Kanpur (2023–2026)
             </li>
-            <li>
-              <span className="font-medium">
-                160 Days Complete Coding Challenge
-              </span>{" "}
-              – GeeksforGeeks (2025)
-            </li>
+           
             <li>Full-Stack Web Development (MERN Stack)</li>
             <li>
               Complete Java Programming and Data Structures & Algorithms with
@@ -58,18 +53,18 @@ function About() {
           <ul className="list-disc pl-6 md:pl-8 text-gray-700 space-y-2">
             <li>
               <span className="font-medium">Languages:</span> Java, JavaScript,
-              HTML, C, Python,  <span className="text-blue-700 font-semibold">SQL</span>
+               C, Python <span className="text-blue-700 font-semibold">SQL</span>
             </li>
             <li>
               <span className="font-medium">Frameworks & Libraries:</span>{" "}
-              React.js, Node.js, Express.js
+              React.js, Next.js, Node.js, Express.js
             </li>
             <li>
-              <span className="font-medium">Database:</span> MongoDB
+              <span className="font-medium">Database:</span> MongoDB, MySQL, PostgreSQl
             </li>
             <li>
               <span className="font-medium">Tools & Platforms:</span> Git,
-              GitHub, Postman, Vercel, Render
+              GitHub, Postman, Vercel, Render, AWS
             </li>
             <li>
               <span className="font-medium">Other Skills:</span> REST APIs,
@@ -86,18 +81,25 @@ function About() {
           <ul className="list-disc pl-6 md:pl-8 text-gray-700 space-y-2">
             <li>
               Completed{" "}
-              <span className="font-medium">400+ DSA Problems</span> on
-              platforms like GeeksforGeeks, LeetCode, Coding Ninjas
+              <span className="font-medium">1500+ DSA Problems</span> on
+              platforms like LeetCode, Codeforces, Codechef, GFG
             </li>
             <li>
               <span className="font-medium">
-                160 Days Coding Challenge Certificate
+               Attained a maximum Codeforces rating of 1640(Expert) and a 3-Star rating on CodeChef
               </span>{" "}
-              – GeeksforGeeks (2025)
+              
+            </li>
+             <li>
+            Achieved a 1700+ LeetCode rating with consistent participation in coding contests.
             </li>
             <li>
-              Consistent Learner with multiple certifications from Coursera,
-              Udemy, and other platforms
+              Participated in a college-level hackathon, building a team-based solution under tight deadlines.
+            </li>
+            
+            <li>
+              Consistent Learner with multiple certifications from Oracle,
+              TCS, and other platforms
             </li>
           </ul>
         </div>
@@ -108,10 +110,7 @@ function About() {
             Mission Statement
           </h2>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            My mission is to leverage my technical skills and creativity to
-            build impactful web applications and contribute to meaningful
-            digital experiences. I aim to grow as a full-stack developer, take
-            on real-world challenges, and continuously learn and improve.
+           My mission is to build scalable full-stack and AI-driven solutions as a Software Development Engineer, solve real-world problems, and continuously evolve through learning, innovation, and impactful product development.
           </p>
         </div>
       </div>
